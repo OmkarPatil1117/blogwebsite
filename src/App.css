@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+/* Navbar */
+ul {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.2rem solid;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0.4rem;
+}
+ul > div :active {
+    color: lightgreen ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul > div :hover {
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Home */
+.Banner {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-gap: 1rem;
+    color: white;
+    font-size: 0.8rem;
+}
+.mainBanner {
+    grid-column: 1   / 2;
+    grid-row: 1 / 3;
+    background-image: url("https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    height: 20rem;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sideBanner1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-image: url("https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.sideBanner2 {
+    background-color: yellow;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-image: url("https://images.pexels.com/photos/14284862/pexels-photo-14284862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.latestContainer {
+    margin: 1rem 7rem 1rem 7rem;
 }
+
+/* LatestCard */
+.imgDiv {
+    width: 100%;
+    height: 10rem;
+    background-image: url("https://images.pexels.com/photos/14284862/pexels-photo-14284862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.cardContainer {
+    width: 30%;
+
+}
+
