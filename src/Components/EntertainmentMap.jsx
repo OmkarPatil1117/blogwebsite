@@ -1,13 +1,21 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import BlogPage from './BlogPage'
 
 const EntertainmentMap = (props) => {
+  const Navigate = useNavigate();
+  const getBlog = (data) => {
+    Navigate("/blogPage", { state : { img : data } })
+  }
   return (
     <>
-    {props.arr.map( (item)=> {
+    {props.arr.map( (item, index)=> {
                 return (
-                    <div className="cardContainer"  style={{ margin : "1rem", display : "flex", textAlign : "center" , width : "75%" }} >
+                    <div className="cardContainer" key={index}  onClick={ ()=> {
+                      getBlog(item.imgUrl)
+                    } } >
 
-                    <div className="imgDiv">
+                    <div className="imgDiv" style={{ backgroundImage : `url("${ item.imgUrl }") `, width: "25rem", marginRight : "2rem" }}>
             
                     </div>
                     <div>
